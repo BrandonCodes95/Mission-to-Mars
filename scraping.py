@@ -16,7 +16,7 @@ def scrape_all():
 
 #set up path for brower and open chrome browser
 
-    executable_path = {'executable_path' : ChromeDriverManager().install()}
+    #executable_path = {'executable_path' : ChromeDriverManager().install()}
 
     browser = Browser('chrome', **executable_path, headless=False)
 
@@ -117,7 +117,7 @@ def featured_image(browser):
     try: 
         img_url_rel = img_soup.find('img', class_='fancybox-image').get('src')
 
-        img_url_rel
+        
 
     except AttributeError:
         return None
